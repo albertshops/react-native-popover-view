@@ -488,8 +488,8 @@ class AdaptivePopover extends Component<AdaptivePopoverProps, AdaptivePopoverSta
         onCloseStart={() => {
           onCloseStart && onCloseStart();
           this.debug("Tearing down keyboard listeners");
-          this.keyboardDidShowListener && this.keyboardDidShowListener.remove();
-          this.keyboardDidHideListener && this.keyboardDidHideListener.remove();
+          this.keyboardDidShowListener && Keyboard.removeListener("keyboardDidShow", this.keyboardDidShow.bind(this))
+          this.keyboardDidHideListener && Keyboard.removeListener("keyboardDidHide", this.keyboardDidShow.bind(this))
           this.keyboardDidShowListener = null;
           this.keyboardDidHideListener = null;
           if (this._isMounted) this.setState({ shiftedDisplayArea: null });
