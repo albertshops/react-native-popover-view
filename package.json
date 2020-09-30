@@ -22,7 +22,7 @@
     "start": "node_modules/react-native/packager/packager.sh",
     "test": "jest",
     "prepare": "patch-package",
-    "prepublishOnly": "tsc",
+    "prepublishOnly": "tsc"
   },
   "jest": {
     "preset": "react-native",
