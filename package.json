@@ -23,7 +23,7 @@
     "test": "jest",
     "prepare": "patch-package",
     "prepublishOnly": "tsc",
-    "postinstall": "tsc"
+    "prepack": "tsc"
   },
   "jest": {
     "preset": "react-native",
